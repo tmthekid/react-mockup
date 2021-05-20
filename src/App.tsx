@@ -1,8 +1,5 @@
 import { FC, useState } from "react";
 import 'rsuite/dist/styles/rsuite-default.css';
-import { FlexboxGrid, Col } from 'rsuite';
-import { Drawer } from "./components/Drawer";
-import { Appbar } from './components/appbar/Appbar';
 import { Routes } from "./routes/Routes";
 import { AppContext } from './AppContext';
 import { useMediaQuery } from 'react-responsive';

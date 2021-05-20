@@ -1,4 +1,4 @@
-import { FC, useRef, RefObject, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import { FlexboxGrid } from 'rsuite';
 import { Header } from '../components/header/Header';
 
