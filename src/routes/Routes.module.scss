@@ -1,0 +1,15 @@
+.routesWrapper {
+    background: rgb(245, 242, 242);
+}
+
+.routes {
+    @media screen and (min-width: 75em) {
+        margin-right: 3rem;
+    }
+    @media screen and (min-width: 62em) and (max-width: 75em) {
+        margin: 0 1rem 0 1rem;
+    }
+    @media screen and (max-width: 62em) {
+        margin: 0 1rem 0 4.5rem;
+    }
+}

@@ -1,0 +1,6 @@
+.appbar {
+    padding: 2rem 3rem;
+    @media screen and (max-width: 62em){
+        padding: 1rem;
+    }
+}
