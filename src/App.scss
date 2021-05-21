@@ -6,3 +6,20 @@ body {
     background: #575757 !important;
     color: #fff !important;
 }
+
+.rs-nav-item-active {
+    background: #fff !important;
+    p {
+        color: #575757 !important;
+    }
+}
+
+.active-tab {
+    background: #575757;
+    color: #fff;
+    font-weight: normal;
+}
+
+.validation-error {
+    color: rgb(230, 2, 2);
+}

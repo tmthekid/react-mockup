@@ -1,5 +1,9 @@
-export { Login } from './Login';
-export { Dashboard } from './Dashboard/Dashboard';
-export { TalktoAttorney } from './TalktoAttorney';
-export { DocumentReview } from './DocumentReview/DocumentReview';
-export { DemandLetter } from './DemandLetter';
+export { Login } from './login/Login';
+export { Dashboard } from './dashboard/Dashboard';
+export { TalktoAttorney } from './talk-to-attorney/TalktoAttorney';
+export { DocumentReview } from './document-review/DocumentReview';
+export { DemandLetter } from './demand-letter/DemandLetter';
+export { TemplateLibrary } from './template-library/TemplateLibrary';
+export { Feedback } from './feedback/Feedback';
+export { Settings } from './settings/Settings';
+export { NotFound } from './errors/NotFound';

@@ -1,0 +1,33 @@
+.sidebar {
+    height: 100%;
+    background: #575757;
+    a {
+        text-decoration: none;
+    }
+    p {
+        text-decoration: none;
+        color: #fff !important;
+        &:hover {
+            background: #fff;
+            color: #575757 !important;
+        }
+    }
+    &__logout {
+        a {
+            color: #fff !important;
+            &:hover {
+                background: #fff;
+                color: #575757 !important;
+            }
+        }
+    }
+    &__btn {
+        position: absolute; 
+        top: 3%;
+        left: 95%;
+        button {
+            background: #575757 !important;
+            color: #fff !important;
+        }
+    }
+}

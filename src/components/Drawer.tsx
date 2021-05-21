@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Drawer as RsDrawer } from 'rsuite';
-import { Sidebar } from '../components/Sidebar';
+import { Sidebar } from './sidebar/Sidebar';
 import { AppContext } from '../AppContext';
 
 const Drawer:FC = () => {

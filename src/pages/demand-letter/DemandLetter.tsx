@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import { Header } from '../components/header/Header';
+import { Header } from '../../components/header/Header';
 import { Form, FormGroup, FormControl, Uploader, Button } from 'rsuite';
+import classes from './DemandLetter.module.scss';
 
 const DemandLetter:FC = () => {
     return (
         <>
             <Header title="Document Review" tagline="Send your legal documents for review" />
-            <Form fluid>
+            <Form className={ classes.demandLetter } fluid>
                 <FormGroup>
                     <FormControl placeholder="Name" name="name" />
                 </FormGroup>

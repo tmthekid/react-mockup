@@ -1,0 +1,46 @@
+.appointment {
+    margin-top: 1rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    align-items: center;
+    div:nth-child(1) {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: #575757;
+        color: #fff;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+    }
+    div:nth-child(2) {
+        margin-left: 1rem;
+    }
+}
+
+.consultation {
+    position: relative;
+    background: #fff;
+    div {
+        margin: 0 1rem;
+        padding: 1rem 2rem;
+        border: 1px solid #ece6e6;
+    }
+    a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        text-decoration: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: #575757;
+    }
+}
+
+.table {
+    box-shadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px';
+    margin-bottom: 2rem;
+}

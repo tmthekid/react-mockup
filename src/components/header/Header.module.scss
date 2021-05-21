@@ -1,7 +1,14 @@
 .header {
     text-align: center;
+    margin-top: 1rem;
     h1 {
         font-size: 1.8rem;
+        @media screen and (max-width: 48em){
+            font-size: 1.3rem;
+        }
+        @media screen and (max-width: 30em){
+            font-size: 1rem;
+        }
     }
     h4 {
         font-size: .8rem;

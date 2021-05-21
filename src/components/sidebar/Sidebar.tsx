@@ -2,8 +2,9 @@ import { FC, useState } from 'react';
 import { Sidenav, Nav, ButtonToolbar, IconButton, Icon  } from 'rsuite';
 import { SVGIcon } from 'rsuite/lib/@types/common';
 import { IconNames } from 'rsuite/lib/Icon';
-import { AppContext } from '../AppContext';
+import { AppContext } from '../../AppContext';
 import { NavLink } from 'react-router-dom';
+import classes from './Sidebar.module.scss';
 
 export const navItems: Array<{ eventKey: string; name: string; icon: IconNames | SVGIcon, to: string }> = [
 	{
@@ -53,12 +54,6 @@ export const navItems: Array<{ eventKey: string; name: string; icon: IconNames |
 		name: 'Feedback',
 		icon: 'bullhorn',
 		to: '/feedback'
-	},
-    {
-		eventKey: '9',
-		name: 'Logout',
-		icon: 'sign-out',
-		to: '/signout'
 	}
 ];
 
@@ -72,16 +67,21 @@ const Sidebar:FC = () => {
     return (
 		<AppContext.Consumer>
 			{
-				({ isMobile, expanded, setExpanded }) => <Sidenav expanded={ !isMobile || expanded } activeKey={activeKey} onSelect={handleActive}>
+				({ isMobile, expanded, setExpanded, user, setUser }) => <Sidenav className={ classes.sidebar } expanded={ !isMobile || expanded }>
 					<Sidenav.Body>
 						<Nav>
-							{ navItems.map(i => <NavLink to={i.to} key={i.eventKey}><Nav.Item eventKey={i.eventKey} icon={<Icon icon={i.icon} />}>
-								{ i.name }
-							</Nav.Item></NavLink>) }
+							{ navItems.map(i => <NavLink to={i.to} key={i.eventKey}>
+								<Nav.Item componentClass="p" onSelect={ handleActive } active={ activeKey === i.eventKey } eventKey={ i.eventKey } icon={ <Icon icon={i.icon} /> }>
+									{ i.name }
+								</Nav.Item>
+							</NavLink>) }
+							{ user && <Nav.Item className={ classes.sidebar__logout } onClick={() => setUser(null)}><Icon icon="sign-out" /> Logout</Nav.Item> }
 						</Nav>
-						{ isMobile && expanded && <ButtonToolbar style={{ position: 'absolute', top: '10%', left: '95%' }}>
-                        <IconButton onClick={ () => setExpanded(s => !s) } size="sm" circle icon={<Icon icon="caret-left" />} />
-                    </ButtonToolbar>}
+						{ isMobile && expanded && 
+							<ButtonToolbar className={ classes.sidebar__btn }>
+								<IconButton onClick={ () => setExpanded(s => !s) } size="sm" circle icon={<Icon icon="caret-left" />} />
+							</ButtonToolbar> 
+						}
 					</Sidenav.Body>
 				</Sidenav>
 			}
