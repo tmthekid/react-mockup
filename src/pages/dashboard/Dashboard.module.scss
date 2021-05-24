@@ -1,3 +1,16 @@
+.container {
+    margin: 0 7rem;
+    @media screen and (max-width: 75em) {
+        margin: 0 5rem;
+    }
+    @media screen and (max-width: 37.5em) {
+        margin: 0 2rem;
+    }
+    @media screen and (max-width: 30em) {
+        margin: 0 .5rem;
+    }
+}
+
 .wrapper {
     display: flex;
     @media screen and (max-width: 48em) {

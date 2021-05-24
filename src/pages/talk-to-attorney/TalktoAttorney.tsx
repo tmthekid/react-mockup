@@ -19,12 +19,13 @@ const times: Array<Record<string, string>> = [
 const TalktoAttorney:FC = () => {
     return (
         <>
-            <Header title="Talk To Your Attorney" tagline="Have a question for your lawyer? No Problem, just schedule it below." />
+            <Header border={ false } title="Talk To Your Attorney" tagline="Have a question for your lawyer? No Problem, just schedule it below." />
             <FlexboxGrid className={ classes.appointment }>
-                <FlexboxGridItem>
+                <FlexboxGridItem style={{ display: 'flex', alignItems: 'center' }}>
                     <p>1</p>
+                    <div>Choose Appointment</div>
                 </FlexboxGridItem>
-                <FlexboxGridItem>Choose Appointment</FlexboxGridItem>
+                <FlexboxGridItem>Returning? <Link style={{ color: '#575757' }} to="/login">Login</Link></FlexboxGridItem>
             </FlexboxGrid>
             <div className={ classes.consultation }>
                 <div>

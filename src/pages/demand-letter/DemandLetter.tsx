@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { Header } from '../../components/header/Header';
-import { Form, FormGroup, FormControl, Uploader, Button } from 'rsuite';
+import { Form, FormGroup, FormControl, Button } from 'rsuite';
 import classes from './DemandLetter.module.scss';
 
 const DemandLetter:FC = () => {
     return (
         <>
             <Header title="Document Review" tagline="Send your legal documents for review" />
-            <Form className={ classes.demandLetter } fluid>
+            <Form className={ classes.form } fluid>
                 <FormGroup>
                     <FormControl placeholder="Name" name="name" />
                 </FormGroup>
@@ -33,12 +33,11 @@ const DemandLetter:FC = () => {
                     <FormControl placeholder="List of all involved 3rd parties" name="third_parties" rows={5} componentClass="textarea" />
                 </FormGroup>
                 <FormGroup>
-                    {/* pass the url to action */}
-                    <Uploader multiple action="">
-                        <Button>Upload your file(s)</Button>
-                    </Uploader>
+                    <FormControl type="file" />
+                    <FormControl type="file" />
+                    <FormControl type="file" />
                 </FormGroup>
-                <Button style={{ width: '100%' }} appearance="primary">Send</Button>
+                <Button>Send</Button>
             </Form>
         </>
     );

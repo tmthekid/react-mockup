@@ -11,7 +11,7 @@ const Settings:FC = () => {
 
     return (
         <>
-            <Header title="Settings" tagline="Update your personal information and payment information" />
+            <Header border={ false } title="Settings" tagline="Update your personal information and payment information" />
             <FlexboxGrid className={ classes.settings }>
                 <FlexboxGrid.Item ref={ profile } onClick={() => setTab('profile')}>
                     <p className={ tab === 'profile' ? 'active-tab' : '' }>Profile</p>

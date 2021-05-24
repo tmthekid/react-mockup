@@ -1,3 +1,15 @@
+.container {
+    @media screen and (min-width: 62em) {
+        padding: 2rem 7rem;
+    }
+    @media screen and (max-width: 62em) {
+        padding: 2rem 5rem;
+    }
+    @media screen and (max-width: 37.5em) {
+        padding: 2rem 1rem;
+    }
+}
+
 .row {
     justify-content: space-around;
     @media screen and (max-width: 48em) {
@@ -20,5 +32,8 @@
      p {
          margin-top: -.4rem;
          margin-bottom: 1rem;
+     }
+     a {
+         color: #494e52;
      }
 }

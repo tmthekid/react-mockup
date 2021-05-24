@@ -5,11 +5,12 @@ import classes from './Card.module.scss';
 interface CardProps {
     title?: string;
     btnText?: string;
+    border?: boolean;
 }
 
-const Card:FC<CardProps> = ({ title, children, btnText }) => {
+const Card:FC<CardProps> = ({ title, children, btnText, border = true }) => {
     return (
-        <div className={ classes.card }>
+        <div className={ classes.card } style={{ borderBottom: border ? '5px solid #575757' : '' }}>
             { title && <h1>{ title }</h1> }
             <div>{ children }</div>
             { btnText && <ButtonToolbar className={ classes.btnToolbar }>

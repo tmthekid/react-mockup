@@ -1,3 +1,16 @@
-.documentReview {
-    margin: 2rem 0;
+.form {
+    padding: 2rem 7rem;
+    @media screen and (max-width: 37.5em) {
+        padding: 1rem 1rem;
+    }
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    button {
+        width: 100%;
+        background: #474e53;
+        color: #fff;
+        &:hover, &:focus, &:visited {
+            background: #474e53;
+            color: #fff;
+        }
+    }
 }

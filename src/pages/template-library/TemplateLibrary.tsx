@@ -43,28 +43,28 @@ const courtesies: Array<{to: string, name: string}> = [
 
 const TemplateLibrary:FC = () => {
     return (
-        <>
+        <div className={ classes.container }>
             <Header title="Legal Documents" tagline="Download our most common forms below and save time getting your issue resolved" />
-            <Card>
+            <Card border={ false }>
                 <FlexboxGrid className={ classes.row }>
                     <FlexboxGrid.Item className={ classes.column }>
                         <h2>Agreement</h2>
                         <p>Select a document to download</p>
-                        { agreements.map(a => <Link key={a.name} to="/file.pdf" target="_blank" download>{ a.name }</Link>) }
+                        { agreements.map((a, i) => <Link key={a.name} to="/file.pdf" target="_blank" download>{ i + 1 } { a.name }</Link>) }
                     </FlexboxGrid.Item>
                     <FlexboxGrid.Item className={classes.column}>
                         <h2>Resolution</h2>
                         <p>Select a document to download</p>
-                        { resolutions.map(a => <Link key={a.name} to="/file.pdf" target="_blank" download>{ a.name }</Link>) }
+                        { resolutions.map((a, i) => <Link key={a.name} to="/file.pdf" target="_blank" download>{ i + 1 } { a.name }</Link>) }
                     </FlexboxGrid.Item>
                     <FlexboxGrid.Item className={classes.column}>
                         <h2>Courtesy Letters</h2>
                         <p>Select a letter to send</p>
-                        { courtesies.map(a => <Link key={a.name} to="/file.pdf" target="_blank" download>{ a.name }</Link>) }
+                        { courtesies.map((a, i) => <Link key={a.name} to="/file.pdf" target="_blank" download>{ i + 1 } { a.name }</Link>) }
                     </FlexboxGrid.Item>
                 </FlexboxGrid>
             </Card>
-        </>
+        </div>
     );
 }
 export { TemplateLibrary };

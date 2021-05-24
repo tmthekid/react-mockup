@@ -5,7 +5,7 @@ import classes from './Dashboard.module.scss';
 
 const Dashboard:FC = () => {
     return (
-        <>
+        <div className={ classes.container }>
             <Header title="Welcome to your member dashboard" tagline="Talk to your attorney, send your documents for document review, and access your template library" />
                 <div className={ classes.wrapper }>
                     <Card title="Talk to Attorney" btnText="Schedule a call">
@@ -41,7 +41,7 @@ const Dashboard:FC = () => {
                     Let us know so we can fix it!
                 </Card>
             </div>
-        </>
+        </div>
     )
 }
 export { Dashboard }

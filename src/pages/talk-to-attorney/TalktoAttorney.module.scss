@@ -1,27 +1,44 @@
 .appointment {
-    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
+    margin: 1rem 7rem 0 7rem;
+    @media screen and (max-width: 62em) {
+        margin: 1rem 4rem 0 4rem;
+    }
+    @media screen and (max-width: 37.5em) {
+        margin: 1rem 0;
+    }
     background: #fff;
     padding: 1rem 2rem;
     align-items: center;
     div:nth-child(1) {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        background: #575757;
-        color: #fff;
         p {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: inherit;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #575757;
+            color: #fff;
         }
     }
     div:nth-child(2) {
-        margin-left: 1rem;
+        margin-left: .5rem;
     }
 }
 
 .consultation {
+    margin: 0 7rem;
+    @media screen and (max-width: 62em) {
+        margin: 0 4rem;
+    }
+    @media screen and (max-width: 37.5em) {
+        margin: 0;
+    }
     position: relative;
     background: #fff;
     div {
@@ -41,6 +58,13 @@
 }
 
 .table {
+    margin: 0 7rem;
+    @media screen and (max-width: 62em) {
+        margin: 0 4rem;
+    }
+    @media screen and (max-width: 37.5em) {
+        margin: 0;
+    }
     box-shadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px';
     margin-bottom: 2rem;
 }

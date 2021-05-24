@@ -16,7 +16,7 @@ const Feedback = () => {
             <FormGroup>
                 <FormControl placeholder="Message" rows={5} name="message" componentClass="textarea" />
             </FormGroup>
-            <Button style={{ width: '100%' }} appearance="primary">Send</Button>
+            <Button>Send</Button>
         </Form>
         </>
     );

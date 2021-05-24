@@ -1,11 +1,14 @@
 .settings {
-    margin: 2rem 0;
+    @media screen and (min-width: 37.5em) {
+        margin: 2rem 6rem;
+    }
+    justify-content: space-around;
     div {
-        font-weight: bold;
         cursor: pointer;
         width: 50%;
         p {
-            margin: 0 1rem;
+            border-top: 8px solid #6d6f72;
+            // margin: 0 1rem;
             text-align: center;
             padding: .5em .2rem;
         }

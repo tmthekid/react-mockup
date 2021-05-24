@@ -1,8 +1,15 @@
 .sidebar {
     height: 100%;
-    background: #575757;
+    background: #494e52;
+    text-transform: uppercase;
     a {
         text-decoration: none;
+        li {
+            p {
+                font-size: .7rem !important;
+                font-weight: bold;
+            }
+        }
     }
     p {
         text-decoration: none;
